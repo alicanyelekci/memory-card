@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import './App.css';
 
 import Header from './components/Header';
 import StartPage from './components/StartPage';
 import GamePage from './components/GamePage';
 import ResultPage from './components/ResultPage';
 import Footer from './components/Footer';
-import { func } from 'prop-types';
+import background from './assets/img/background.jpg';
 
 function App() {
     const [gameStage, setGameStage] = useState('start');
@@ -41,9 +40,10 @@ function App() {
     }
 
     return (
-        <>
+        <div className="container">
             <Header className="header" score={score} highScore={highScore} />
             <div className="body">
+                <img src={background} className="background-img" />
                 {gameStage === 'start' ? (
                     <StartPage onClick={() => setGameStage('game')} />
                 ) : gameStage === 'game' ? (
@@ -53,7 +53,7 @@ function App() {
                 )}
             </div>
             <Footer />
-        </>
+        </div>
     );
 }
 

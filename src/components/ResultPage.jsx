@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ResultPage({ score, onClick, status }) {
     return (
-        <>
+        <div className="result-page">
             {status === 'high' ? (
                 <>
                     <p>New High Score! | Final Score: {score}</p>
@@ -21,6 +21,6 @@ export default function ResultPage({ score, onClick, status }) {
             ) : null}
 
             <button onClick={onClick}>Restart</button>
-        </>
+        </div>
     );
 }
