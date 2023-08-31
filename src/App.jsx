@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Header from './components/Header';
 import StartPage from './components/StartPage';
@@ -11,7 +11,16 @@ function App() {
     const [gameStage, setGameStage] = useState('start');
     const [score, setScore] = useState(0);
     const [status, setStatus] = useState('');
-    const [highScore, setHighScore] = useState(0);
+    const [highScore, setHighScore] = useState(() => {
+        const localValue = localStorage.getItem('HighScore');
+        if (localValue === null) return 0;
+
+        return JSON.parse(localValue);
+    });
+
+    useEffect(() => {
+        localStorage.setItem('HighScore', JSON.stringify(highScore));
+    }, [highScore]);
 
     function increaseScore() {
         setScore(score + 1);
