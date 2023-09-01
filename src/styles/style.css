@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Office';
-    src: url(src/assets/office.ttf);
+    src: url(/assets/office.ttf);
 }
 
 :root {
@@ -8,7 +8,11 @@
     color: black;
     background-color: #f3f4f6;
 
-    font-family: 'Office', Arial, Helvetica, sans-serif;
+    font-family:
+        'Office',
+        'Times New Roman' Arial,
+        Helvetica,
+        sans-serif;
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
