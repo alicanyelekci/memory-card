@@ -48,7 +48,7 @@ export default function GamePage(props) {
 
     return (
         <div className="game-page">
-            <h2>Level {level}</h2>
+            <h2>- Level {level} -</h2>
             <div className="open-cards">
                 {stack.map((card) => {
                     return <Card key={card.id} id={card.id} name={card.name} image={card.image} onClick={handleCardPick} />;

@@ -84,7 +84,7 @@ const charactersArr = [
         { image: robert_lipton, name: 'Robert Lipton', id: 33 },
         { image: cathy_simms, name: 'Cathy Simms', id: 34 },
         { image: helene_beesly, name: 'Helene Beesly', id: 35 },
-        { image: hidetoshi_hasagawa, name: 'Hidetoshi Hasagawa', id: 36 },
+        { image: hidetoshi_hasagawa, name: 'Hidetoshi', id: 36 },
         { image: charles_miner, name: 'Charles Miner', id: 37 },
         { image: carol_stills, name: 'Carol Stills', id: 38 },
         { image: val, name: 'Val', id: 39 },
